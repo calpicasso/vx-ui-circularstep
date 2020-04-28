@@ -1,5 +1,5 @@
 inlets = 1;
-outlets = 1;
+outlets = 2;
 
 //================================================================//
 // Globals & Attributes
@@ -10,7 +10,6 @@ var oncolor = [0.6, 0.6, 0.6, 1.0];
 var offcolor = [0.8, 0.8, 0.8, 1.0];
 var pulsecolor = [0.343, 0.343, 0.343, 1.0];
 var pulseoncolor = [0.068015, 0.777344, 0.994485, 1.0];
-var steps = 16;
 var black = [0, 0, 0, 1.0];
 var curIndex = 0;
 var activations = [];
@@ -21,10 +20,7 @@ declareattribute("oncolor");
 declareattribute("offcolor");
 declareattribute("pulseoncolor");
 declareattribute("pulsecolor");
-declareattribute("steps");
-declareattribute("activations");
 declareattribute("thickness");
-declareattribute("curIndex");
 
 //================================================================//
 // Polygon class
@@ -314,41 +310,27 @@ P5.prototype.text = function (txt, x, y)
 //================================================================//
 
 var p5 = new P5(mgraphics, this.box);
-
 p5.init();
 
 function setup () 
 {
+	setsteps(16);
 }
 
 function modulofix (x, m) {
   return (x % m + m) % m;
 }
 
-function update_data () 
-{
-	p5.update();
-	
-	curIndex = modulofix(curIndex,steps);
-
-	var minSize = Math.min(p5.width, p5.height);
-	poly = new Polygon(steps, (minSize / 2) - (minSize * 0.1));
-
-	if (activations.length < steps) {
-		while (activations.length < steps) {
-			activations.push(0);
-		}
-	}
-}
-
 function paint_data()
 {
+	var numsteps = activations.length;
+
 	style = {
 		cap: "round",
 		arcsizescale: 1.
 	};
 
-	if (steps > 16)
+	if (numsteps > 16)
 	{
 		style.cap = "butt";
 		style.arcsizescale = 1.7
@@ -356,7 +338,10 @@ function paint_data()
 
 	mgraphics.set_line_cap (style.cap);
 
-	update_data ();
+	p5.update(); // to update p5.width, p5.height
+
+	var minSize = Math.min(p5.width, p5.height);
+	poly = new Polygon(numsteps, (minSize / 2) - (minSize * 0.1));
 
 	/* Colors */
 	var backgroundColor = p5.color(bgcolor[0], bgcolor[1], bgcolor[2], bgcolor[3]);
@@ -438,22 +423,77 @@ function onclick(x,y)
 	mgraphics.redraw();
 }
 
+function update_data(numsteps) {
+
+	if (numsteps === undefined)
+		numsteps = activations.length;
+
+	// update activations
+	if (activations.length != numsteps) {
+		if (activations.length > numsteps) {
+			activations = activations.slice(0, numsteps);
+		} else {
+			while (activations.length < numsteps) {
+				activations.push(0);
+			}
+		}
+	}
+	// update current index
+	curIndex = modulofix(curIndex, numsteps);
+}
+
+function getactivations()
+{
+	outlet(0, ['activations'].concat(activations));
+}
+
+// set number of pulses silently
 function pulses (x)
 {
-	var nact = new Array(steps);
-	for (var i = 0; i < steps; ++i)
-	{
+	for (var i = 0; i < activations.length; ++i) {
 		activations[i]= (i < x) ? 1 : 0;
 	}
 }
 
+// same as pulses, but trig the activations on outlet 0
+function setpulses (x)
+{
+	pulses(x);
+	getactivations();
+}
+
+function getpulses ()
+{
+	var np=0;
+	activations.forEach(function (x) {if(x > 0) ++np;});
+	outlet(0, "pulses", np);
+}
+
+// set steps silently
+function steps (x)
+{
+	x = Math.max(1, x);
+	update_data(x);
+}
+
+function getsteps ()
+{
+	outlet(0, "steps", activations.length);
+}
+
+// set steps and trigger activations on outlet 0
+function setsteps (x)
+{
+	steps(x);
+	getactivations();
+}
+
+// set the index and trigger list(index, activation at index) on outlet 1
 function setindex(n) 
 {
-	curIndex = modulofix(n, steps);
-	if (curIndex < activations.length) {
-		outlet(0, curIndex, activations[curIndex]);
-	}
-	mgraphics.redraw();
+	curIndex = n;
+	update_data ();
+	outlet(1, curIndex, activations[curIndex]);
 }
 
 function list()
@@ -461,10 +501,10 @@ function list()
 	var a = arrayfromargs(arguments);
 	if (a.length > 0) 
 	{
-		steps = a.length;
 		activations = a;
+		update_data(activations.length);
+		getactivations();
 	}
-	mgraphics.redraw();
 }
 
 function bang() 
