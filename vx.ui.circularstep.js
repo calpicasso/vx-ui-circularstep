@@ -381,7 +381,7 @@ function paint_data()
 	poly.vertices.forEach(function(v, i) {
 		var aa = v.a;
 
-		var isPulse = (activations[i]==1);
+		var isPulse = (activations[i]!=0);
 		with (p5) 
 		{
 			push();
