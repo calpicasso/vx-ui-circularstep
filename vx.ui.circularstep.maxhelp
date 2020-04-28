@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 123.0, 987.0, 827.0 ],
+		"rect" : [ 110.0, 86.0, 843.0, 815.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -108,7 +108,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 133.75, 283.0, 77.0, 21.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 145.75, 436.0, 77.0, 21.0 ],
+					"presentation_rect" : [ 75.0, 386.0, 77.0, 21.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_enum" : [ "val1", "val2" ],
@@ -129,13 +129,13 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-54",
-					"linecount" : 2,
+					"linecount" : 4,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 605.25, 680.0, 50.0, 35.0 ],
-					"text" : "1 0 0 1 0"
+					"patching_rect" : [ 605.25, 680.0, 50.0, 62.0 ],
+					"text" : "1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0"
 				}
 
 			}
@@ -150,7 +150,7 @@
 					"patching_rect" : [ 22.25, 725.5, 321.5, 87.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 5,
-					"presentation_rect" : [ 10.0, 482.5, 425.5, 74.0 ],
+					"presentation_rect" : [ 10.0, 490.5, 425.5, 74.0 ],
 					"text" : "WARNING : js | jsui files are executed on a low-priority thread : it is not adviced that they drive a critical-timing-sequence directly.\n\nfor more info :\nhttps://docs.cycling74.com/max8/vignettes/jsthreading",
 					"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ]
 				}
@@ -166,7 +166,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 426.0, 720.0, 19.696969696969688, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 330.575757575757621, 409.5, 37.424242424242379, 38.0 ],
+					"presentation_rect" : [ 61.575757575757621, 439.0, 37.424242424242379, 38.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_enum" : [ "off", "on" ],
@@ -201,8 +201,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 426.0, 691.0, 51.0, 22.0 ],
-					"text" : "zl mth 0"
+					"patching_rect" : [ 426.0, 691.0, 47.0, 22.0 ],
+					"text" : "zl nth 0"
 				}
 
 			}
@@ -215,7 +215,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 511.25, 284.0, 208.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 380.5, 164.5, 208.0, 20.0 ],
+					"presentation_rect" : [ 244.5, 188.5, 208.0, 20.0 ],
 					"text" : "CONFIGURATIONS"
 				}
 
@@ -231,7 +231,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 486.0, 33.0, 196.5, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 380.5, 73.0, 196.5, 22.0 ],
+					"presentation_rect" : [ 244.5, 395.0, 196.5, 22.0 ],
 					"text" : "Guidelines"
 				}
 
@@ -246,7 +246,7 @@
 					"patching_rect" : [ 486.0, 53.0, 196.5, 60.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 4,
-					"presentation_rect" : [ 380.5, 93.0, 196.5, 60.0 ],
+					"presentation_rect" : [ 244.5, 415.0, 196.5, 60.0 ],
 					"text" : "1. Change Steps\n2. Change Pulses\n3. Start the Sequence\n4. Change the configuration lists"
 				}
 
@@ -262,7 +262,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 287.5, 130.5, 79.0, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 155.5, 166.5, 79.0, 22.0 ],
+					"presentation_rect" : [ 155.5, 116.5, 76.5, 22.0 ],
 					"text" : "SET INDEX"
 				}
 
@@ -278,7 +278,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 168.0, 128.5, 59.0, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 84.0, 166.5, 59.0, 22.0 ],
+					"presentation_rect" : [ 84.0, 116.5, 59.0, 22.0 ],
 					"text" : "PULSES"
 				}
 
@@ -294,7 +294,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 91.5, 128.5, 49.0, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 9.75, 166.5, 52.0, 22.0 ],
+					"presentation_rect" : [ 9.75, 116.5, 52.0, 22.0 ],
 					"text" : "STEPS"
 				}
 
@@ -308,7 +308,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 511.25, 431.0, 168.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 380.5, 311.5, 168.0, 20.0 ],
+					"presentation_rect" : [ 244.5, 333.5, 168.0, 20.0 ],
 					"text" : "non regular seq - 5 steps"
 				}
 
@@ -322,7 +322,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 511.25, 369.0, 167.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 380.5, 249.5, 167.0, 20.0 ],
+					"presentation_rect" : [ 244.5, 273.5, 167.0, 20.0 ],
 					"text" : "non regular seq - 11 steps"
 				}
 
@@ -349,7 +349,7 @@
 					"patching_rect" : [ 511.25, 300.0, 211.0, 33.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 2,
-					"presentation_rect" : [ 380.5, 180.5, 211.0, 33.0 ],
+					"presentation_rect" : [ 244.5, 204.5, 211.0, 33.0 ],
 					"text" : "set steps, pulses, and pulse positions using lists"
 				}
 
@@ -364,7 +364,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 270.5, 692.0, 31.0, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 10.0, 436.0, 31.0, 22.0 ]
+					"presentation_rect" : [ 10.0, 386.0, 31.0, 22.0 ]
 				}
 
 			}
@@ -748,7 +748,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 427.0, 130.5, 92.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 255.0, 166.5, 92.0, 20.0 ],
+					"presentation_rect" : [ 244.5, 117.5, 92.0, 20.0 ],
 					"text" : "START SEQ"
 				}
 
@@ -763,7 +763,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 310.5, 692.0, 19.696969696969688, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 47.0, 436.0, 19.696969696969688, 20.0 ],
+					"presentation_rect" : [ 111.25, 288.0, 10.0, 10.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_enum" : [ "off", "on" ],
@@ -799,7 +799,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 426.0, 779.0, 45.0, 45.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 380.5, 406.0, 45.0, 45.0 ]
+					"presentation_rect" : [ 10.0, 435.5, 45.0, 45.0 ]
 				}
 
 			}
@@ -812,20 +812,8 @@
 					"outlettype" : [ "signal" ],
 					"patching_rect" : [ 426.0, 749.0, 77.0, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 380.5, 376.0, 77.0, 22.0 ],
+					"presentation_rect" : [ 10.0, 415.0, 45.0, 22.0 ],
 					"text" : "click~"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-44",
-					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "int" ],
-					"patching_rect" : [ 499.0, 184.5, 29.5, 22.0 ],
-					"text" : "- 1"
 				}
 
 			}
@@ -921,7 +909,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 511.25, 453.0, 55.0, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 380.5, 333.5, 55.0, 22.0 ],
+					"presentation_rect" : [ 244.5, 355.5, 55.0, 22.0 ],
 					"text" : "1 0 0 1 0"
 				}
 
@@ -945,7 +933,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 511.25, 391.0, 115.0, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 380.5, 271.5, 115.0, 22.0 ],
+					"presentation_rect" : [ 244.5, 295.5, 115.0, 22.0 ],
 					"text" : "1 1 0 0 0 1 1 0 1 0 1"
 				}
 
@@ -961,7 +949,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 427.0, 155.0, 24.0, 24.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 255.0, 188.0, 24.0, 24.0 ]
+					"presentation_rect" : [ 244.5, 139.0, 24.0, 24.0 ]
 				}
 
 			}
@@ -972,8 +960,8 @@
 					"numinlets" : 5,
 					"numoutlets" : 4,
 					"outlettype" : [ "int", "", "", "int" ],
-					"patching_rect" : [ 427.0, 215.5, 70.0, 22.0 ],
-					"text" : "counter 16"
+					"patching_rect" : [ 427.0, 215.5, 75.0, 22.0 ],
+					"text" : "counter 1 16"
 				}
 
 			}
@@ -999,14 +987,14 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 287.5, 153.0, 50.0, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 155.5, 189.0, 50.0, 22.0 ],
+					"presentation_rect" : [ 155.5, 139.0, 50.0, 22.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_type" : 3,
 							"parameter_longname" : "number[2]",
 							"parameter_initial_enable" : 1,
 							"parameter_invisible" : 1,
-							"parameter_initial" : [ 0 ],
+							"parameter_initial" : [ 1 ],
 							"parameter_shortname" : "number[2]"
 						}
 
@@ -1048,7 +1036,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 511.25, 335.0, 165.0, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 380.5, 215.5, 165.0, 22.0 ],
+					"presentation_rect" : [ 244.5, 239.5, 165.0, 22.0 ],
 					"text" : "1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0"
 				}
 
@@ -1063,7 +1051,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 151.0, 153.0, 32.5, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 84.0, 189.0, 47.5, 22.0 ],
+					"presentation_rect" : [ 84.0, 139.0, 47.5, 22.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_type" : 3,
@@ -1115,7 +1103,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 76.5, 153.0, 38.0, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 9.75, 189.0, 52.0, 22.0 ],
+					"presentation_rect" : [ 9.75, 139.0, 52.0, 22.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_type" : 3,
@@ -1154,7 +1142,7 @@
 					"patching_rect" : [ 10.0, 93.0, 387.75, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 10.0, 93.0, 366.75, 20.0 ],
-					"text" : "default is 16 (emptys) steps pattern (= no pulses)",
+					"text" : "---",
 					"textcolor" : [ 0.43921568627451, 0.43921568627451, 0.43921568627451, 1.0 ]
 				}
 
@@ -1170,7 +1158,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 76.5, 391.0, 213.0, 213.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 9.75, 217.0, 213.0, 213.0 ]
+					"presentation_rect" : [ 9.75, 167.0, 213.0, 213.0 ]
 				}
 
 			}
@@ -1361,15 +1349,8 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-44", 0 ],
-					"source" : [ "obj-41", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-24", 4 ],
-					"source" : [ "obj-44", 0 ]
+					"source" : [ "obj-41", 0 ]
 				}
 
 			}
@@ -1506,12 +1487,12 @@
 			}
  ],
 		"parameters" : 		{
+			"obj-21" : [ "number[2]", "number[2]", 0 ],
 			"obj-64" : [ "Change colors", "Change colors", 0 ],
+			"obj-18" : [ "number", "number", 0 ],
+			"obj-59" : [ "live.button", "live.button", 0 ],
 			"obj-7" : [ "live.button[1]", "live.button", 0 ],
 			"obj-15" : [ "number[1]", "number[1]", 0 ],
-			"obj-18" : [ "number", "number", 0 ],
-			"obj-21" : [ "number[2]", "number[2]", 0 ],
-			"obj-59" : [ "live.button", "live.button", 0 ],
 			"parameterbanks" : 			{
 
 			}

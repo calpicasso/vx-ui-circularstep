@@ -314,7 +314,7 @@ p5.init();
 
 function setup () 
 {
-	setsteps(16);
+	steps(16);
 }
 
 function modulofix (x, m) {
@@ -444,6 +444,7 @@ function update_data(numsteps) {
 
 function getactivations()
 {
+	// post("send activations\n");
 	outlet(0, ['activations'].concat(activations));
 }
 
@@ -466,6 +467,7 @@ function getpulses ()
 {
 	var np=0;
 	activations.forEach(function (x) {if(x > 0) ++np;});
+	// post("send pulses\n");
 	outlet(0, "pulses", np);
 }
 
@@ -478,6 +480,7 @@ function steps (x)
 
 function getsteps ()
 {
+	// post("send getsteps\n");
 	outlet(0, "steps", activations.length);
 }
 
@@ -489,11 +492,13 @@ function setsteps (x)
 }
 
 // set the index and trigger list(index, activation at index) on outlet 1
+// 1-based index
 function setindex(n) 
 {
-	curIndex = n;
+	curIndex = n-1;//1-based index
 	update_data ();
-	outlet(1, curIndex, activations[curIndex]);
+	// post("send index\n");
+	outlet(1, [curIndex, activations[curIndex]]);
 }
 
 function list()
