@@ -23,14 +23,14 @@ declareattribute("pulsecolor");
 declareattribute("thickness");
 
 //================================================================//
-// Polygon class
+// CircularShape class
 //================================================================//
 
-function Polygon(sides, radius) {
+function CircularShape(sides, radius) {
 	this.set(sides || 5, radius)
 }
 
-Polygon.prototype.createPoint = function(angle, radius) {
+CircularShape.prototype.createPoint = function(angle, radius) {
 	return {
 		x: Math.cos(angle) * radius,
 		y: Math.sin(angle) * radius,
@@ -38,7 +38,7 @@ Polygon.prototype.createPoint = function(angle, radius) {
 	};
 }
 
-Polygon.prototype.set = function(sides, radius) {
+CircularShape.prototype.set = function(sides, radius) {
 	const rad = radius || 1;
 	const HalfPi = Math.PI * 0.5;
 	const TwoPi = Math.PI * 2;
@@ -53,14 +53,11 @@ Polygon.prototype.set = function(sides, radius) {
 	}
 }
 
-Polygon.prototype.extend = function(radius) {
+CircularShape.prototype.extendRadius = function(radius) {
 	var arr = [];
 	for (var i = 0; i < this.vertices.length; ++i) {
-		const v = this.vertices[i];
-		arr.push({
-			x: v.x * radius,
-			y: v.y * radius
-		});
+		this.vertices[i].x *= radius;
+		this.vertices[i].y *= radius;
 	}
 	return arr;
 }
@@ -341,7 +338,7 @@ function paint_data()
 	p5.update(); // to update p5.width, p5.height
 
 	var minSize = Math.min(p5.width, p5.height);
-	poly = new Polygon(numsteps, (minSize / 2) - (minSize * 0.1));
+	poly = new CircularShape(numsteps, (minSize / 2) - (minSize * 0.1));
 
 	/* Colors */
 	var backgroundColor = p5.color(bgcolor[0], bgcolor[1], bgcolor[2], bgcolor[3]);
