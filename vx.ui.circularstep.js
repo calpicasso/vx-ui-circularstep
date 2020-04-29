@@ -1,3 +1,10 @@
+/* 
+	vx.ui.circularstep by Charles Al. Picasso
+	- Circular step view
+*/
+
+
+
 inlets = 1;
 outlets = 2;
 
@@ -5,7 +12,7 @@ outlets = 2;
 // Globals & Attributes
 //================================================================//
 
-var	bgcolor = [0.9, 0.9, 0.9, 0.0];
+var bgcolor = [0.9, 0.9, 0.9, 0.0];
 var oncolor = [0.6, 0.6, 0.6, 1.0];
 var offcolor = [0.8, 0.8, 0.8, 1.0];
 var pulsecolor = [0.343, 0.343, 0.343, 1.0];
